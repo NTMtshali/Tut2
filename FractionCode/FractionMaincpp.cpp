@@ -4,17 +4,31 @@
 #include "Fraction.h"
 
 using namespace std;
+void READmixed( Fraction &Fr)
+{
+	int qout, num, den;
+	cout << "enter a mixed fraction as qoutient, numerator and denominator:" << "\n";
+	cin >> qout;
+	cin >> num;
+	cin >> den;
+	Fr.setFraction((den*qout + num), den);
+}
 
 int main(void)
 {
 	Fraction A; //initialized by the default constructer
-	Fraction B(2, 8) ;
-	Fraction C(15, 10);
+	READmixed(A);
+	Fraction B ;
+	READmixed(B);
+	Fraction C;
+	READmixed(C);
+	Fraction H(7, 0);	//denominator is set to zero
 
 	/*printing out of the declared objects*/
 	A.getFraction();
 	B.getFraction();
 	C.getFraction();
+	H.getFraction();
 
 	cout << "\n" << endl;
 
