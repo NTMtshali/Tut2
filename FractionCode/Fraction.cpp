@@ -53,7 +53,12 @@ Fraction Fraction::operator/(Fraction Fr)
 void Fraction::setFraction(int numerator, int denominator)//sets the data members
 {
 	nRator = numerator;
-	dRator = denominator;
+	if (denominator==0)
+		dRator = 2; // default denominator thats the same as that of the constructer
+	else
+	{
+		dRator = denominator;
+	}
 }
 
 void Fraction::getFraction()

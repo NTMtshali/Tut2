@@ -25,8 +25,8 @@ class Fraction
 		Fraction operator-(Fraction Fr);//overloaded subtraction sign
 		Fraction operator/(Fraction Fr);//overloaded division sign
 		void print(int numerator, int denominator);//prints out the fraction
-		void setFraction(int numerator, int denominator); 
-		void getFraction();
+		void setFraction(int numerator, int denominator); //sets the numerator and denominator of the object
+		void getFraction(); //gets the fraction
 	
 };
 
