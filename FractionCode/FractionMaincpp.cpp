@@ -19,17 +19,18 @@ int main(void)
 	cout << "\n" << endl;
 
 	/*basic BODMAS*/
-	(A + B).getFraction();
-	(C*A).getFraction();
-	(C / A).getFraction();
-	(C - A).getFraction();
+	(A + B).getFraction();	//A+B returns an object Fraction
+	(C*A).getFraction();	//C*A returns an object Fraction
+	(C / A).getFraction();	//C/A returns an object Fraction
+	(C - A).getFraction();	//C-A returns an object Fraction
 
 	cout << "\n" << endl;
 
-	/*advance BODMAS*/;
-	(A + B + C).getFraction();
-	(C*B / A).getFraction();
-	((A - C) / B).getFraction();
+	/*advance BODMAS*/
+	/*The normal operator precedence is kept*/
+	(A + B + C).getFraction(); //A+B returns a Fraction object which is then added to C
+	(C*B / A).getFraction();	//C*B returns a Fraction object which is then divided by A
+	((A - C) / B).getFraction();	//A-C returns a Fraction object which is the divided by B
 
 	return 0;
 }

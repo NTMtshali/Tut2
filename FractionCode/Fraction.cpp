@@ -1,4 +1,4 @@
-/*Implimantation of the class object*/
+/*Implemantation of the class object*/
 
 
 #include <iostream>
@@ -27,7 +27,7 @@ Fraction Fraction::operator*(Fraction Fr)
 	int den = dRator*Fr.dRator;
 
 	Fraction D(num, den);
-	return  D;//return object for cascading
+	return  D;//return Fraction object for cascading
 }
 
 Fraction Fraction::operator-(Fraction Fr)
@@ -37,7 +37,7 @@ Fraction Fraction::operator-(Fraction Fr)
 
 	
 	Fraction D(num, den);
-	return  D;//return object for cascading
+	return  D;//return Fraction object for cascading
 }
 
 Fraction Fraction::operator/(Fraction Fr)
@@ -46,11 +46,11 @@ Fraction Fraction::operator/(Fraction Fr)
 	int den = dRator*Fr.nRator;
 
 	Fraction D(num, den);
-	return  D; //return object for cascading
+	return  D; //return Fraction object for cascading
 
 }
 
-void Fraction::setFraction(int numerator, int denominator)
+void Fraction::setFraction(int numerator, int denominator)//sets the data members
 {
 	nRator = numerator;
 	dRator = denominator;
@@ -66,12 +66,12 @@ void Fraction :: print(int numerator, int denominator) //prints the fraction
 {
 	if (abs(numerator)>= denominator)
 	{
-		cout << numerator / denominator << " and " << numerator%denominator << "/" << denominator << endl; //prints mixed fraction if numerator>=1
+		cout << numerator / denominator << " and " << numerator%denominator << "/" << denominator << endl; //prints mixed fraction if numerator>=denominator
 	}
 
 	else
 	{
-		cout << numerator << "/" << denominator << endl;
+		cout << numerator << "/" << denominator << endl; //prints the fraction if numerator<denominator
 	}
 	
 }

@@ -1,10 +1,11 @@
-/*Interface of the class object*/
-/*prototype decleration*/
+/*Interface of the class object Fraction*/
+/*Prototype decleration*/
 
 #ifndef Fraction_H
 #define Fraction_H
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 class Fraction
@@ -17,7 +18,7 @@ class Fraction
 		
 		Fraction(int=1, int=2); //default constructor
 
-		/* all the overloaded operaters return a fraction to allow for cascaded calculations*/
+		/* All the overloaded operaters return a fraction to allow for cascaded calculations*/
 
 		Fraction operator+(Fraction Fr);//overloaded addition sign.
 		Fraction operator*(Fraction Fr);//overloaded multiplication sign
