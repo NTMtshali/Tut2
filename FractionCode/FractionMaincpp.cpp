@@ -4,14 +4,14 @@
 #include "Fraction.h"
 
 using namespace std;
-void READmixed( Fraction &Fr)
+void READmixed( Fraction &Fr)// object argument is passed by reference
 {
 	int qout, num, den;
 	cout << "enter a mixed fraction as qoutient, numerator and denominator:" << "\n";
 	cin >> qout;
 	cin >> num;
 	cin >> den;
-	Fr.setFraction((den*qout + num), den);
+	Fr.setFraction((den*qout + num), den); //sets the passed object
 }
 
 int main(void)
