@@ -2,6 +2,7 @@
 
 
 #include <iostream>
+#include <iomanip>
 #include "Fraction.h"
 using namespace std;
 
