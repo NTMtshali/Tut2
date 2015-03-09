@@ -13,7 +13,23 @@ Fraction::Fraction(int num, int den)// default constructer implementation
 
 ostream &operator<<(ostream &output, const Fraction &Fr)
 {
-	output << Fr.nRator << "/" << Fr.dRator << "\n" << endl;
+	if (abs(Fr.nRator) > Fr.dRator)
+	{
+		if (Fr.nRator%Fr.dRator)
+		{
+			output << Fr.nRator / Fr.dRator << endl;
+		}
+		else
+		{
+			output << Fr.nRator / Fr.dRator << " and " << Fr.nRator%Fr.dRator << "/" << Fr.dRator << endl; //prints mixed fraction if numerator>=denominator
+		}
+
+	}
+
+	else
+	{
+		output << Fr.nRator << "/" << Fr.dRator << endl; //prints the fraction if numerator<denominator
+	}
 
 	return output;
 }
