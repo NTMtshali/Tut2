@@ -9,6 +9,15 @@ Fraction::Fraction(int num, int den)// default constructer implementation
 {
 	setFraction(num, den);
 }
+ostream &operator<<(ostream &output, const Fraction &Fr)
+{
+	output << Fr.nRator << "/" << Fr.dRator << endl;
+}
+
+istream &operator>>(istream &input, Fraction &Fr)
+{
+	
+}
 
 Fraction Fraction:: operator+(Fraction Fr)
 {
