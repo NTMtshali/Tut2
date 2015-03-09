@@ -10,23 +10,14 @@ Fraction::Fraction(int num, int den)// default constructer implementation
 {
 	setFraction(num, den);
 }
-ostream &operator<<(ostream &output, const Fraction &Fr)
-{
-	output << Fr.nRator << "/" << Fr.dRator << endl;
-}
-
-istream &operator>>(istream &input, Fraction &Fr)
-{
-	
-}
 
 ostream &operator<<(ostream &output, const Fraction &Fr)
 {
 	if (abs(Fr.nRator) >= Fr.dRator)
 	{
-		if (Fr.nRator%Fr.dRator == 0)
+		if (Fr.nRator%Fr.dRator == 0) //checks if denominator is a factor of the numerator
 		{
-			output << Fr.nRator / Fr.dRator << endl;
+			output << Fr.nRator / Fr.dRator << endl; // prints the result if denominator is a factor of the numerator
 		}
 		else
 		{
@@ -36,8 +27,16 @@ ostream &operator<<(ostream &output, const Fraction &Fr)
 	}
 
 	else
+
 	{
-		output << Fr.nRator << "/" << Fr.dRator << endl; //prints the fraction if numerator<denominator
+		if (Fr.nRator == 0)
+		{
+			output << Fr.nRator << endl;
+		}
+		else
+		{
+			output << Fr.nRator << "/" << Fr.dRator << endl; //prints the fraction if numerator<denominator
+		}
 	}
 
 	return output;
@@ -45,13 +44,13 @@ ostream &operator<<(ostream &output, const Fraction &Fr)
 
 istream &operator>>(istream &input, Fraction &Fr)
 {
-	int num;
-	int den;
+	int num; // variable to hold the numerator from user
+	int den; //variable to hold the denominator from user
 
-	input >> setw(1) >> num;
-	input.ignore();
-	input >> setw(1) >> den;
-	Fr.setFraction(num, den);
+	input >> setw(1) >> num;	// Takes the numerator
+	input.ignore();				// ignores the '/'
+	input >> setw(1) >> den;	//Takes the denominator
+	Fr.setFraction(num, den);	//validates the values and sets the variables
 
 	return input;
 }
