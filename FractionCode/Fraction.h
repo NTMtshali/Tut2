@@ -19,6 +19,8 @@ class Fraction
 		Fraction(int=1, int=2); //default constructor
 
 		/* All the overloaded operaters return a fraction to allow for cascaded calculations*/
+		friend ostream &operator<<(ostream &, const Fraction &);
+		friend istream &operator>>(istream &, Fraction &);
 		Fraction operator+(Fraction Fr);//overloaded addition sign.
 		Fraction operator*(Fraction Fr);//overloaded multiplication sign
 		Fraction operator-(Fraction Fr);//overloaded subtraction sign

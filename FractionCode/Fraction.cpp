@@ -11,6 +11,26 @@ Fraction::Fraction(int num, int den)// default constructer implementation
 	setFraction(num, den);
 }
 
+ostream &operator<<(ostream &output, const Fraction &Fr)
+{
+	output << Fr.nRator << "/" << Fr.dRator << "\n" << endl;
+
+	return output;
+}
+
+istream &operator>>(istream &input, Fraction &Fr)
+{
+	int num;
+	int den;
+
+	input >> setw(1) >> num;
+	input.ignore();
+	input >> setw(1) >> den;
+	Fr.setFraction(num, den);
+
+	return input;
+}
+
 Fraction Fraction:: operator+(Fraction Fr)
 {
 	int num = nRator*Fr.dRator + Fr.nRator*dRator;
@@ -71,7 +91,8 @@ void Fraction::getFraction()
 void Fraction :: print(int numerator, int denominator) //prints the fraction
 {
 	if (abs(numerator)>= denominator)
-	{
+	{	
+		
 		cout << numerator / denominator << " and " << numerator%denominator << "/" << denominator << endl; //prints mixed fraction if numerator>=denominator
 	}
 
