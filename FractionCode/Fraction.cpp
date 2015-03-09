@@ -13,9 +13,9 @@ Fraction::Fraction(int num, int den)// default constructer implementation
 
 ostream &operator<<(ostream &output, const Fraction &Fr)
 {
-	if (abs(Fr.nRator) > Fr.dRator)
+	if (abs(Fr.nRator) >= Fr.dRator)
 	{
-		if (Fr.nRator%Fr.dRator)
+		if (Fr.nRator%Fr.dRator == 0)
 		{
 			output << Fr.nRator / Fr.dRator << endl;
 		}

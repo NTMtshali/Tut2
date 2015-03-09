@@ -20,6 +20,10 @@ int main(void)
 	cout << "Enter a fraction in the form a/b:" << "\n";
 	cin >> C;
 
+	Fraction D;
+	cout << "Enter a fraction in the form a/b:" << "\n";
+	cin >> D;
+
 	Fraction H(7, 0);	//denominator is set to zero
 	cout << "\n";
 
@@ -27,7 +31,9 @@ int main(void)
 	cout << A;
 	cout << B;
 	cout << C;
+	cout << D;
 	cout << H;
+	
 
 	cout << "\n" << endl;
 
